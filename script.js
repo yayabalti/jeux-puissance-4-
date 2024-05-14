@@ -511,11 +511,11 @@ const startGameContainer = document.getElementById('startGame');
 const inGameContainer = document.getElementById('inGameContainer');
 
 //Importing Sound
- const gameStartSound = new Audio("./Sound_Source_Game-start.wav"); // Son de démarrage du jeu
- const gameEndSound = new Audio('./Sound_Source_Game-over.wav'); // Son de fin du jeu
- const bombTouchSound = new Audio('./Sound_Source_gank.wav'); // Son de toucher une bombe
- const timeBeepSound = new Audio('./Sound_Source_time-beep.wav'); // Son d'alerte de temps
- const buttonPushSound = new Audio('./Sound_Source_ui-button-push.wav'); // Son de pression de bouton
+ const gameStartSound = new Audio("./sound source/Sound_Source_Game-start.wav"); // Son de démarrage du jeu
+ const gameEndSound = new Audio("./sound source/Sound_Source_Game-over.wav"); // Son de fin du jeu
+ const bombTouchSound = new Audio("./sound source/Sound_Source_gank.wav"); // Son de toucher une bombe
+ const timeBeepSound = new Audio("./sound source/Sound_Source_time-beep.wav"); // Son d'alerte de temps
+ const buttonPushSound = new Audio("./sound sourceSound_Source_ui-button-push.wav"); // Son de pression de bouton
 
 let isSwordSoundPlaying = false;
 
@@ -523,7 +523,7 @@ let isSwordSoundPlaying = false;
 const cursorImage = new Image();
 
 // définissez la source de l'image
-cursorImage.src ="/couteaufruit.png";
+cursorImage.src ="img/couteaufruit.png";
 
 // attendez que l'image soit chargée avant de la définir comme curseur
 cursorImage.onload = () => {
@@ -536,7 +536,7 @@ cursorImage.onload = () => {
 // Fonction pour jouer le son de l'épée
  // Générer un son audio aléatoire basé sur un numéro aléatoire pour le nom du fichier son
     const playSwordSound = () => {
-     let swordAudio = new Audio(`./sound source/Sound_Source_Sword_Sound_Effects_Sword-swipe-${Math.floor(Math.random() * 6) + 1}.wav`);
+     let swordAudio = new Audio(`sound source/Sound_Source_Sword_Sound_Effects_Sword-swipe-${Math.floor(Math.random() * 6) + 1}.wav`);
      swordAudio.play();
      // permet au son de ce declancher 1 par 1 
      isSwordSoundPlaying = true;
@@ -675,15 +675,15 @@ function Ball() {
          this.size = Math.floor((Math.random() * 50) + 70); // Taille aléatoire
          this.color = `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`; // Couleur aléatoire
          this.images =[
-             "/pomme.png",
-             "/pomegranate1.png",
-             "/citron1.png",
-             "/banane1.png",
-             "/ananas1.png",
-             "/fraise1.png",
-             "/fruit_du_dragon1.png",
-             "/noix_de_coco1.png",
-             "/pasteck1.png",
+             "/img/pomme.png",
+             "/img/pomegranate1.png",
+             "/img/citron1.png",
+             "/img/banane1.png",
+             "/img/ananas1.png",
+             "/img/fraise1.png",
+             "/img/fruit_du_dragon1.png",
+             "/img/noix_de_coco1.png",
+             "/img/pasteck1.png",
     
          ] 
          this.image = new Image();
@@ -765,8 +765,8 @@ function EnemyBomb() {
     this.size = Math.floor((Math.random() * 100) + 100);
     this.color = `black`;
     this.images =[
-                 "virus1.png",
-                 "virus2.png",
+                 "/img/virus1.png",
+                 "/img/virus2.png",
              ] 
 
             this.image = new Image();
@@ -936,7 +936,7 @@ let isGameStarted = false;
 let isGamePause = false;
 let isGameEnd = false;
 let backgroundImage = new Image();
-backgroundImage.src = "/marche-nourriture-rue-nocturne_91128-3589.jpg";
+backgroundImage.src = "/img/marche-nourriture-rue-nocturne_91128-3589.jpg";
 let animationId;
 
 //Animate function to render every....

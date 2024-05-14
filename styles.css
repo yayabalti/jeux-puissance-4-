@@ -9,7 +9,7 @@ body{
     padding: 0; 
     box-sizing: border-box; /* Assure que les dimensions des éléments sont incluses dans leurs dimensions totales */
     overflow: hidden; /*Cache tout ce qui dépasse les limites du conteneur */
-    cursor:url(couteaufruit.png); /* Change le curseur en une croix pour indiquer qu'il peut interagir avec l'élément */
+    cursor:url(img/couteaufruit.png); /* Change le curseur en une croix pour indiquer qu'il peut interagir avec l'élément */
     
 }
 
@@ -18,7 +18,7 @@ body{
 /* Style du canvas où le jeu sera affiché */
 
 #canvas{
-    background-image: url(/smoothis-ninja.jpg);
+    background-image: url(img/smoothis-ninja.jpg);
     background-size: 100%;
     width:100vw; 
     height: 100vh; 
