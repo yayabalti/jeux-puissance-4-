@@ -1,2 +1,371 @@
 
+/*Importation de la police Poppins depuis Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
+
+body{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; /* Assure que les dimensions des éléments sont incluses dans leurs dimensions totales */
+    overflow: hidden; /*Cache tout ce qui dépasse les limites du conteneur */
+    cursor:url(couteaufruit.png); /* Change le curseur en une croix pour indiquer qu'il peut interagir avec l'élément */
+    
+}
+
+
+
+/* Style du canvas où le jeu sera affiché */
+
+#canvas{
+    background-image: url(/smoothis-ninja.jpg);
+    background-size: 100%;
+    width:100vw; 
+    height: 100vh; 
+    background-repeat: no-repeat;
+}
+
+
+
+/* Style du conteneur de démarrage du jeu */
+
+.startGame{
+    z-index: 1; 
+    width: 400vh;
+    display: flex;
+    width: 100vw;
+    position: absolute; 
+    flex-direction: column; /* Organise les enfants en colonne */
+    top: 0;
+    left: 0;
+    font-family: 'Poppins'; /* Utilise la police Poppins */
+    height: 100vh;
+    align-items: center; 
+    justify-content: center;
+    color: white; /* Couleur du texte */
+}
+
+
+
+/* Style du conteneur d'accueil */
+
+.home{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+   
+}
+
+
+
+/* Style du titre d'accueil */
+
+.home h1{
+    color:rgb(255, 255, 255);
+    text-align: center; 
+    margin: 0; 
+    line-height: 40px; /* Spacing entre les lignes du texte */
+    background-color: rgba(0, 0, 0, 0.375);
+    padding: 0.7vh;
+    border-radius: 20%;
+}
+
+.texte-acceuil {
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 0.7vh;
+    font-size: 140%;
+    color:rgb(255, 255, 255);
+    font-weight:900;
+    border-radius: 20%;
+}
+
+#returnHome{
+    text-decoration: none;
+}
+/* Style du sous-titre d'accueil */
+
+.home h1 span{
+    font-size: 1.1rem;
+
+}
+
+ 
+
+/* Style du bouton de démarrage du jeu */
+
+
+
+#startGameBtn{
+    margin: 12px 0; 
+    padding: 8px 16px; 
+    color: white; /* Couleur du texte du bouton */
+    width: 40%; /* Largeur du bouton */
+    background-color: rgb(162, 0, 135); /* Couleur d'arrière-plan du bouton */
+    outline: none;
+    font-size: 22px; 
+    font-family: 'Poppins';
+    font-weight: 600; /* Gras du texte du bouton */
+    border-radius: 4px; 
+    border: none; 
+    cursor:pointer; /* Change le curseur en une main pour indiquer qu'il peut cliquer */
+    align-items: center;
+    transition:.2s; /* Animate les changements de style avec une durée de 0.2s */
+}
+
+
+
+/* Style du bouton de démarrage du jeu lorsqu'il est survolé */
+
+#startGameBtn:hover{
+    background-color: rgb(2, 247, 43); /* Change la couleur d'arrière-plan du bouton lorsqu'il est survolé */
+}
+
+
+
+/* Style du pied de page */
+
+.copyRight{
+    position: absolute;
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%); /* Déplace le pied de page pour qu'il soit centré */
+}
+
+
+
+/* Style du compteur de temps de démarrage */
+
+.countDown{
+    color: white; /* Couleur du texte */
+    font-family: 'Poppins'; /* Police du texte */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); /* Centre le compteur de temps à la fois horizontalement et verticalement */
+    z-index: 16; /* Assure que le compteur de temps est au-dessus des autres éléments */
+    font-size: 15vh;
+}
+
+
+
+/* Animation du compteur de temps */
+
+@keyframes animCount {
+    0%{
+        transform: scale(1); /* Début de l'animation avec la taille originale */
+    }
+    100%{
+        transform: scale(2.2); /* Fin de l'animation avec une taille 2.2 fois plus grande */
+    }
+}
+
+
+
+
+/* Style du conteneur du jeu en cours */
+
+#inGameContainer{
+    position: absolute; 
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0; 
+    background-color: transparent; /* Arrière-plan transparent du conteneur */
+    z-index: 10; /* Assure que le conteneur est au-dessus des autres éléments */
+    color: white; /* Couleur du texte */
+    font-family: 'Poppins'; /* Police du texte */
+    box-sizing: border-box; /* Assure que les dimensions des éléments sont incluses dans leurs dimensions totales */
+    pointer-events: none; /* Empêche les interactions avec le conteneur */
+    display: none;
+    padding: 10px 20px;
+}
+
+
+
+/* Style du compteur de temps du jeu en cours */
+
+#inGameContainer.gameCountTime{
+    position: absolute; 
+    top: 15px; 
+    right: 10px;
+}
+
+
+
+/* Style du compteur de frappes */
+
+#strikeCountDiv{
+    position: absolute; 
+    bottom: 10px; 
+    right: 30px;
+}
+
+
+
+/* Style du compteur de frappes lorsqu'il est animé */
+
+.strikeCount{
+    animation: animStrikeCount.2s linear; /* Applique une animation linéaire avec une durée de 0.2s */
+    width: 45px;
+    height: 45px;
+}
+
+
+
+/* Animation du compteur de frappes */
+
+@keyframes animStrikeCount {
+    0%{
+        transform: scale(1); /* Début de l'animation avec la taille originale */
+    }
+    100%{
+        transform: scale(2.5); /* Fin de l'animation avec une taille 2.5 fois plus grande */
+    }
+}
+
+
+
+/* Style de l'en-tête du jeu */
+
+.gameHeading{
+    position: absolute;
+    top: 0; 
+    left: 50%; 
+    z-index: 12; 
+    font-family: 'Poppins'; /* Police du texte */
+    transform: translateX(-50%); /* Centre l'en-tête horizontalement */
+    background-color:rgb(162, 0, 135); /* Couleur d'arrière-plan de l'en-tête */
+    color: white; /* Couleur du texte */
+    padding: 4px 14px;
+    border-bottom-left-radius: 12px; 
+    border-bottom-right-radius: 12px;
+}
+
+
+
+/* Style du paragraphe de l'en-tête du jeu */
+
+.gameHeading p{
+    margin: 0;
+}
+
+
+
+/* Style du conteneur de fin de jeu */
+
+#gameEndDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(3, 3, 3, 0.464); /* Arrière-plan semi-transparent du conteneur de fin de jeu */
+    z-index: 15; 
+    display: none;
+    pointer-events: none; /* Empêche les interactions avec le conteneur de fin de jeu */
+    align-items: center; 
+    justify-content: center; /* Centre les enfants verticalement */
+}
+
+
+
+/* Style du conteneur de fin de jeu */
+
+.gameEndContainer{
+    background-color:rgb(162, 0, 135) ; /* Couleur d'arrière-plan du conteneur de fin de jeu */
+    border-radius: 6px; 
+    pointer-events: all; /* Permet les interactions avec le conteneur de fin de jeu */
+    color: white; /* Couleur du texte */
+    padding: 25px; 
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.612); /* Ombre autour du conteneur de fin de jeu */
+    text-align: center; 
+    font-family: 'Poppins'; /* Utilise la police Poppins pour le texte */
+}
+
+
+
+/* Style du titre du conteneur de fin de jeu */
+
+.gameEndContainer h1{
+    font-size: 1.5rem; 
+    text-align: center;
+}
+
+
+
+/* Style du paragraphe du conteneur de fin de jeu */
+
+.gameEndContainer p{
+    font-size: 22px;
+}
+
+
+
+
+/* Style du bouton pour retourner à la page d'accueil */
+
+#returnHome{
+    background-color: transparent; /* Arrière-plan transparent du bouton */
+    border: none; 
+    outline: none; /* Supprime l'outline du bouton */
+    border-bottom: 2px solid white; /* Bordure inférieure du bouton en blanc */
+    color: white; /* Couleur du texte du bouton */
+    font-size: 22px;
+    cursor:pointer;
+}
+
+.gameCountTime{
+    margin-left:1090px;
+}
+
+
+
+
+.text-best-score{
+    font-size: 5vh;
+}
+
+.score{
+    font-size: 5vh;
+
+}
+
+#gameMinuteAndSecond{
+    margin-left: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+    
+    .gameCountTime {
+       margin-left: 455px;
+    }
+
+
+   .score{
+    margin-bottom: -18px;
+    margin-top: 0px;
+   }
+
+   #gameMinuteAndSecond{
+    margin-top: 7px;
+   }
+
+   .gameEndContainer{
+    padding: 5px;
+   }
+
+   #gameMinuteAndSecond{
+    margin-left: 0px;
+}
+  }
