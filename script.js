@@ -663,6 +663,7 @@ const context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+
 //All Elements array
 let ballArray = [];
 let ballParticlesArray = [];
@@ -690,9 +691,9 @@ function Ball() {
              this.image.src = this.images[Math.floor(Math.random() * this.images.length)]; // Sélectionne une image aléatoire
         
              
-                if (window.matchMedia('(max-width: 800px)').matches) {
+                if (window.matchMedia('(max-width: 426px)').matches) {
                   // code pour la version mobile
-                  this.speedY = 7.5;                                   // Vitesse de déplacement vertical
+                  this.speedY = 8;                                   // Vitesse de déplacement vertical
                   this.size = Math.floor((Math.random() * 30) + 50);   //Taille aléatoire
                   this.speedX = Math.round((Math.random() - 0.5) * 2); // Vitesse de déplacement horizontal
                   this.speedY -=.0;
@@ -773,9 +774,9 @@ function EnemyBomb() {
             this.image.src = this.images[Math.floor(Math.random() * this.images.length)]; // Sélectionne une image aléatoire
 
 
-            if (window.matchMedia('(max-width: 800px)').matches) {
+            if (window.matchMedia('(max-width:426px)').matches) {
                 // code pour la version mobile
-                this.speedY = 7.5;                                                // Vitesse de déplacement vertical
+                this.speedY = 8;                                                // Vitesse de déplacement vertical
                 this.size = Math.floor((Math.random() * 60) + 60);                // taile aleatoire
                 this.speedX = Math.round((Math.random() - 0.5) * 2);              // Vitesse de déplacement horizontal
               } 

@@ -315,7 +315,7 @@ body{
 }
 
 .gameCountTime{
-    margin-left:1090px;
+    margin-left:500px;
 }
 
 
@@ -327,7 +327,8 @@ body{
 
 .score{
     font-size: 5vh;
-
+    margin-bottom: -18px;
+    margin-top: 0px;
 }
 
 #gameMinuteAndSecond{
@@ -345,20 +346,22 @@ body{
 
 /* RESPONSIVE */
 
-@media screen and (min-width: 768px) {
+@media (max-width: 426px) and (min-width:320px){
     
-    .gameCountTime {
-       margin-left: 455px;
+    .gameCountTime{
+       margin-left:100px;
     }
 
 
    .score{
     margin-bottom: -18px;
     margin-top: 0px;
+    font-size: 25px;
    }
 
    #gameMinuteAndSecond{
     margin-top: 7px;
+    width: 115px;
    }
 
    .gameEndContainer{
@@ -366,6 +369,39 @@ body{
    }
 
    #gameMinuteAndSecond{
-    margin-left: 0px;
+    position:absolute;
+    right: 20px;
 }
+
+ .text-best-score{
+    font-size: 25px;
+    margin-top: 10px;
+}
+#inGameContainer{
+    padding: 0px 12px;
+}
+
+#canvas{
+    background-size: 167%;
+}
+
+
+ .texte-acceuil {
+    font-size: 77%;
   }
+
+  .home h1 {
+    font-size: 180%;
+  }
+
+  #startGameBtn {
+    font-size: 20px;
+    width: 33%;
+}
+
+.startGame{
+    position: absolute;
+    bottom: 50px; 
+}
+
+}
