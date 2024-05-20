@@ -500,12 +500,6 @@
 
 
 
-
-
-
-
-
-
 const playButton = document.getElementById('startGameBtn');
 const startGameContainer = document.getElementById('startGame');
 const inGameContainer = document.getElementById('inGameContainer');
@@ -519,7 +513,7 @@ const inGameContainer = document.getElementById('inGameContainer');
 
 let isSwordSoundPlaying = false;
 
-// créez une nouvelle instance de l'objet Image
+// créez une nouvelle instance de l'objet Image (couteau)
 const cursorImage = new Image();
 
 // définissez la source de l'image
@@ -662,7 +656,7 @@ const context = canvas.getContext('2d');
 //Set canvas to full Screen
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+background = window.innerHeight;
 
 //All Elements array
 let ballArray = [];
@@ -693,7 +687,7 @@ function Ball() {
              
                 if (window.matchMedia('(max-width: 426px)').matches) {
                   // code pour la version mobile
-                  this.speedY = 8;                                   // Vitesse de déplacement vertical
+                  this.speedY = 10;                                   // Vitesse de déplacement vertical
                   this.size = Math.floor((Math.random() * 30) + 50);   //Taille aléatoire
                   this.speedX = Math.round((Math.random() - 0.5) * 2); // Vitesse de déplacement horizontal
                   this.speedY -=.0;
@@ -776,7 +770,7 @@ function EnemyBomb() {
 
             if (window.matchMedia('(max-width:426px)').matches) {
                 // code pour la version mobile
-                this.speedY = 8;                                                // Vitesse de déplacement vertical
+                this.speedY = 10;                                                // Vitesse de déplacement vertical
                 this.size = Math.floor((Math.random() * 60) + 60);                // taile aleatoire
                 this.speedX = Math.round((Math.random() - 0.5) * 2);              // Vitesse de déplacement horizontal
               } 

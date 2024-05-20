@@ -10,8 +10,12 @@ body{
     box-sizing: border-box; /* Assure que les dimensions des éléments sont incluses dans leurs dimensions totales */
     overflow: hidden; /*Cache tout ce qui dépasse les limites du conteneur */
     cursor:url(img/couteaufruit.png); /* Change le curseur en une croix pour indiquer qu'il peut interagir avec l'élément */
-    
 }
+
+
+
+
+
 
 
 
@@ -53,7 +57,7 @@ body{
     display: flex; 
     flex-direction: column;
     align-items: center; 
-   
+    margin-top: 225px;
 }
 
 
@@ -344,14 +348,9 @@ body{
 
 
 
-
-
-
-
-
 /* RESPONSIVE */
 
-@media screen and (max-width: 426px){
+@media (min-width: 319px) and (max-width: 426px){
 
 
 body{
@@ -359,70 +358,108 @@ body{
     height: 450px;
 }
 
+
 .gameEndContainer p {
     margin-top: 0;
 }
+
 
  #returnHome{
     text-decoration: none;
     border-bottom:none;
  }
 
+
    .score{
     width: 200px;
    }
 
+
    #gameMinuteAndSecond{
     margin-top: 7px;
     width: 115px;
+    position:absolute;
+    right:15px;
    }
+
 
    .gameEndContainer{
     padding: 5px;
    }
 
-   #gameMinuteAndSecond{
-    position:absolute;
-    right: 15px;
-}
 
  .text-best-score{
     font-size: 25px;
     margin-top: 10px;
 }
-#inGameContainer{
+
+
+ #inGameContainer{
     padding: 0px 12px;
+    width: 142vw;
+    height: 139vh;
 }
 
-#canvas{
-    width: 425px;
-    height: 450px;
-    background-size: 167%;
+ #gameEndDiv {
+    width: 189vw;
+    height: 189vh;
+    
+}
+
+
+ #canvas {
+    width: 454px;
+    height: 650px;
+    background-size: 222%;
 }
 
 
  .texte-acceuil {
-    font-size: 65%;
+    font-size: 94%;
   }
 
   .home h1 {
-    font-size: 153%;
+    font-size: 220%;
     
   }
 
   #startGameBtn {
-    font-size: 20px;
+    font-size: 30px;
     width: 33%;
-    padding: 0px 0px
+    padding: 0px 0px;
 }
 
-.startGame{
+ .startGame{
     position: absolute;
     bottom: 50px; 
     width: 425px;
     height: 450px;
+    top: 105px;
+    left: 10px;
 }
 
 
 
+
+
+/* menu burger */
+
+.menu-icon {
+    display: block;
+}
+
+.menu-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    display: none;
+}
+
+.menu-item {
+    text-align: center;
+    padding: 15px 0;
+}
 }
