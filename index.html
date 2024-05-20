@@ -2,75 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <!-- lien pour les son -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <title>smoothis ninja</title>
+    <link rel="stylesheet" href="style.css">
+    <title>page acceuil</title>
 </head>
 <body>
     
-          <!-- balise canvas -->
-    <canvas id="canvas">
+    <div class="off-screen-menu">
         
-    </canvas>
-
-    <!--  bouton de démarrage et score maximal -->
-    <div class="startGame" id="startGame">
-        <div class="home">
-            
-            <h1>ENVIE D'UN SMOOTHIS ?</h1> 
-
-            <!-- Bouton pour démarrer le jeu -->
-            <button id="startGameBtn">jouer <i class="fa-solid fa-gamepad"></i></button>
-
-            <!-- Affichage du score maximal -->
-            <p class="texte-acceuil">tu a assez couper de fruits pour faire ton smoothis : <span id="homeHighScore"></span></p>
+        <ul>
+          <li><a href="/regle du jeux.html">REGLES DU JEUX</a></li>
+          <li><a href="/inscription.html">INSCRIPTION</a></li>
+        </ul>
+      </div>
+  
+      <nav>
+    <img class="img_acceuil" src="/img acceuil.png" alt="">
+    
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          
+        </div>
+        <div>
+          <p class="texte_inscription_obli">INSCRIPTION OBLIGATOIRE POUR JOUER</p>
         </div>
         
-            
-        </a>
-    </div>
-
-    <!-- Conteneur pour le compte à rebours avant le début du jeu -->
-    <div class="countDown" id="countDownContainer">
-        <h1></h1>
-    </div>
-
-    <!-- Corps du jeu en cours, affichant le score et le temps restant -->
-    <div id="inGameContainer">
-        <div class="scoreDiv">
-
-            <!-- Affichage du score actuel et du score maximal -->
-            <p class="score">Score : <span id="score"></span></p>
-            <p class="text-best-score">best Score: <span id="highScore"></span></p>
-        </div>
-
-        <!-- Affichage du temps restant -->
-        <div class="gameCountTime">
-            <h1 id="gameMinuteAndSecond">00 : 00</h1>
-        </div>
-
-        <!-- Affichage du nombre de frappes -->
-        <div id="strikeCountDiv">
-            <h1 class="strikeCount">1x</h1>
-        </div>
-
-    </div>
-
-    <!-- Corps affiché après la fin du jeu, montrant le score final -->
-    <div id="gameEndDiv">
-        <div class="gameEndContainer">
-
-            <!-- Affichage du score final -->
-            <p>Score:<span id="endGameScore"></span></p>
-
-            <!-- Bouton pour revenir à l'accueil -->
-            <button id="returnHome">acceuil<i class="fa-solid fa-right-to-bracket"></i></button>
-        </div>
-    </div>
-
-    <script src="./script.js"></script>
+      </nav>
+      
+      <script src="/script.js"></script>
 </body>
 </html>
