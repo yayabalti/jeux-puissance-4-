@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body{
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+}
+
+.img_regles_jeux{
+    width: 60vw;
+    height: 100vh;
+}
+
+.div_regles{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full_text{
+    color: white;
+    width: 521px;
+    text-align: center;
+    margin-left: 33px;
+    font-size: 18px;
+    font-family:Poppins;
+}
+
+.flull_paragraphe{
+    margin-top: 90px;
+}
+
+h1{
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 420px;
+    margin-left: 53px;
+}

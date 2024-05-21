@@ -1,4 +1,5 @@
 /*menu burger */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -6,27 +7,31 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    margin-top: -8px;
 }
 
 body{
-    background-color: black;
+    background-color: rgb(30, 30, 30);
+    font-family:Poppins;
 }
 
 .img_acceuil{
-    width: 813px;
-    height: 663px;
+    width: 58vw;
+    height: 93vh;
+    margin-left: 293px;
+    border-radius: 18px;
 }
 
 
 a {
-    color: white;
-    font-size: 33px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
 }
 a:visited {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 a:hover {
-    color: #fbfbfb;
+    color: #ffffff;
 }
 
 
@@ -34,26 +39,28 @@ a:hover {
 
 /* off-screen-menu */
 .off-screen-menu {
-    background-color: rgb(92, 9, 58);
-    height: 50vh;
+    background-color: rgba(92, 9, 57, 0.897);
+    height: 28vh;
     width: 100vw;
-    max-width: 292px;
+    max-width: 184px;
     position: fixed;
-    top: 17px;
-    right: -450px;
+    top: 34px;
+    right: -465px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
     transition: .3s ease;
+    z-index: 100;
+    border-radius: 20px;
 }
 
 
 
 .off-screen-menu.active {
-    right: 200px;
+    right: 335px;
 }
 
 
@@ -69,14 +76,17 @@ nav {
 /* ham menu */
 .ham-menu {
     height: 50px;
-    width: 40px;
-    margin-left:460px;
+    width: 46px;
+    margin-left: 267px;
     position: relative;
+    top: 50px;
+    left: 856px;
+    z-index: 101;
 }
 .ham-menu span {
-height: 5px;
+    height: 5px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 25px;
     position: absolute;
     left: 50%;
@@ -91,7 +101,7 @@ height: 5px;
     top: 75%;
 }
 .ham-menu.active span {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 .ham-menu.active span:nth-child(1) {
     top: 50%;
@@ -109,4 +119,18 @@ height: 5px;
 
 .texte_inscription_obli{
     color: white;
+}
+
+
+p{
+    position: absolute;
+    font-size: 32px;
+    left: 431px;
+    bottom:603px;
+    color: red;
+}
+
+@media (min-width: 319px) and (max-width: 426px){
+
+    
 }

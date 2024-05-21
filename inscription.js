@@ -46,6 +46,6 @@ document.getElementById("inscriptionForm").addEventListener("submit", function(e
     if (isValid) {
         // Traitement de l'inscription (par exemple, envoi des données à un serveur)
         alert("Inscription réussie !");
-        window.location.href = "index.html";
+        window.location.href = "jeux.html";
     }
 });

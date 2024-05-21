@@ -15,6 +15,9 @@ body {
     padding: 30px;
     background-color: #f2f2f2;
     border-radius: 5px;
+    margin-top: 0;
+    color: white;
+    background-color: #000000bc;
 }
 
 h1 {
@@ -23,7 +26,6 @@ h1 {
 }
 
 label {
-    display: block;
     margin-bottom: 5px;
 }
 
@@ -51,6 +53,13 @@ button:hover {
 
 .error-message {
     color: red;
-    font-size: 12px;
+    font-size: 15px;
     display: none;
+}
+
+.img_inscrip{
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
 }
