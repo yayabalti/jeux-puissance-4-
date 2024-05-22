@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: rgb(22, 22, 22);
 }
 
 .container {
@@ -62,4 +63,29 @@ button:hover {
     z-index: -10;
     width: 100vw;
     height: 100vh;
+}
+
+
+
+/* footer */
+
+
+.texte_footer{
+    width: 33vh;
+    position: absolute;
+    left: 91vh;
+    bottom: 1vh;
+    color: white;
+    margin-bottom: 0;
+}
+
+.logo_ninja{
+    width: 21vh;
+    position: absolute;
+    left: 94vh;
+    bottom: 5vh;
+}
+
+hr{
+    margin: 0;
 }

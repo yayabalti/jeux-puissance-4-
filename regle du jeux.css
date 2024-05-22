@@ -33,3 +33,38 @@ h1{
     width: 420px;
     margin-left: 53px;
 }
+
+/* footer */
+.img_footer{
+    width: 39vh;
+    position: absolute;
+    left: 179vh;
+    top: 102vh;
+}
+
+.img_footer_fruit{
+    width: 62vh;
+    position: absolute;
+    top: 101vh;
+}
+
+
+.texte_footer{
+    width: 33vh;
+    position: absolute;
+    left: 93vh;
+    bottom: -42vh;
+    color: white;
+    margin-bottom: 0;
+}
+
+.logo_ninja{
+    width: 21vh;
+    position: absolute;
+    left: 94vh;
+    bottom: -36vh;
+}
+
+hr{
+    margin: 0;
+}

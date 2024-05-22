@@ -124,7 +124,7 @@ nav {
 }
 
 
-p{
+.obligation_inscrip{
     position: absolute;
     font-size: 32px;
     left: 477px;
@@ -143,6 +143,41 @@ h1{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+/* footer */
+.img_footer{
+    width: 39vh;
+    position: absolute;
+    left: 179vh;
+}
+
+.img_footer_fruit{
+    width: 53vh;
+    position: absolute;
+    top: 99vh;
+}
+
+.texte_footer{
+    width: 33vh;
+    position: absolute;
+    left: 89vh;
+    bottom: -34vh;
+    color: white;
+    margin-bottom: 0;
+}
+
+.logo_ninja{
+    width: 21vh;
+    position: absolute;
+    left: 94vh;
+    bottom: -29vh;
+}
+
+hr{
+  margin: 0;  
+}
+
 
 @media (min-width: 319px) and (max-width: 426px){
 
