@@ -199,20 +199,16 @@ function Ball() {
                 }
               
            
-       
-           
+                // Mise à jour de la position de la boule
+                this.update = () => {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                this.speedY -=.1;
+                };
     
-    
-         // Mise à jour de la position de la boule
-         this.update = () => {
-             this.y -= this.speedY;
-             this.x += this.speedX;
-             this.speedY -=.1;
-         };
-    
-         // Dessin de la boule sur le canvas
-          this.draw = () => {
-         context.drawImage(this.image, this.x, this.y, this.size, this.size);
+                // Dessin de la boule sur le canvas
+                this.draw = () => {
+                context.drawImage(this.image, this.x, this.y, this.size, this.size);
           };
      }
 
@@ -220,33 +216,33 @@ function Ball() {
 
 
 
-//Ball Particles Class
+// Classe pour les particules de balle
 function BallParticles(x, y, color) {
 
-    this.x = x;
-    this.y = y;
-    this.size = Math.floor(Math.random() * 3 + 8);
-    this.color = color;
+    this.x = x; // Position X de la particule de balle
+    this.y = y; // Position Y de la particule de balle
+    this.size = Math.floor(Math.random() * 3 + 8); // Taille aléatoire de la particule de balle
+    this.color = color; // Couleur de la particule de balle
 
-    this.speedY = Math.random() * 2 - 2;
-    this.speedX = Math.round((Math.random() - 0.5) * 10);
+    this.speedY = Math.random() * 2 - 2; // Vitesse verticale aléatoire de la particule de balle
+    this.speedX = Math.round((Math.random() - 0.5) * 10); // Vitesse horizontale aléatoire de la particule de balle
 
-    //Updating Ball Particle
+    // Mise à jour de la particule de balle
     this.update = () => {
-        //Decrease size if this.size is greater then .2
-        if (this.size > .2) {
-            this.size -= .1;
+        // Diminuez la taille si cette.taille est supérieure à.2
+        if (this.size >.2) {
+            this.size -=.1;
         }
-        this.y += this.speedY;
-        this.x += this.speedX;
+        this.y += this.speedY; // Mettre à jour la position Y de la particule de balle
+        this.x += this.speedX; // Mettre à jour la position X de la particule de balle
     }
 
-    //Rendering or Drawing Ball on the canvas
+    // Rendu ou dessin de la balle sur le canevas
     this.draw = () => {
-        context.fillStyle = this.color;
-        context.beginPath();
-        context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        context.fill();
+        context.fillStyle = this.color; // Définir la couleur de remplissage du contexte
+        context.beginPath(); // Commencer un nouveau chemin
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2); // Dessiner un arc pour créer la forme de la balle
+        context.fill(); // Remplir le chemin avec la couleur définie
     }
 }
 

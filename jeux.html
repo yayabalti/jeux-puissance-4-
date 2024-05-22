@@ -10,67 +10,70 @@
     <title>smoothis ninja</title>
 </head>
 <body>
-    
-          <!-- balise canvas -->
-    <canvas id="canvas">
+    <header>
+
+    </header>
+        <main>
+            <!-- balise canvas -->
+            <canvas id="canvas">
         
-    </canvas>
+            </canvas>
 
-    <!--  bouton de démarrage et score maximal -->
-    <div class="startGame" id="startGame">
-        <div class="home">
+            <!--  bouton de démarrage et score maximal -->
+            <div class="startGame" id="startGame">
+                <div class="home">
             
-            <h1>ENVIE D'UN SMOOTHIS ?</h1> 
+                    <h1>ENVIE D'UN SMOOTHIS ?</h1> 
 
-            <!-- Bouton pour démarrer le jeu -->
-            <button id="startGameBtn">jouer <i class="fa-solid fa-gamepad"></i></button>
+                    <!-- Bouton pour démarrer le jeu -->
+                    <button id="startGameBtn">jouer <i class="fa-solid fa-gamepad"></i></button>
 
-            <!-- Affichage du score maximal -->
-            <p class="texte-acceuil">tu a assez couper de fruits pour faire ton smoothis : <span id="homeHighScore"></span></p>
-        </div>
-        
-            
-        </a>
-    </div>
+                    <!-- Affichage du score maximal -->
+                    <p class="texte-acceuil">tu a assez couper de fruits pour faire ton smoothis : <span id="homeHighScore"></span></p>
+                </div>
+            </div>
 
-    <!-- Conteneur pour le compte à rebours avant le début du jeu -->
-    <div class="countDown" id="countDownContainer">
-        <h1></h1>
-    </div>
+            <!-- Conteneur pour le compte à rebours avant le début du jeu -->
+            <div class="countDown" id="countDownContainer">
+                <h1></h1>
+            </div>
 
-    <!-- Corps du jeu en cours, affichant le score et le temps restant -->
-    <div id="inGameContainer">
-        <div class="scoreDiv">
+            <!-- Corps du jeu en cours, affichant le score et le temps restant -->
+            <div id="inGameContainer">
+                <div class="scoreDiv">
 
-            <!-- Affichage du score actuel et du score maximal -->
-            <p class="score">Score : <span id="score"></span></p>
-            <p class="text-best-score">best Score: <span id="highScore"></span></p>
-        </div>
+                    <!-- Affichage du score actuel et du score maximal -->
+                    <p class="score">Score : <span id="score"></span></p>
+                    <p class="text-best-score">best Score: <span id="highScore"></span></p>
+                </div>
 
-        <!-- Affichage du temps restant -->
-        <div class="gameCountTime">
-            <h1 id="gameMinuteAndSecond">00 : 00</h1>
-        </div>
+                <!-- Affichage du temps restant -->
+                <div class="gameCountTime">
+                    <h1 id="gameMinuteAndSecond">00 : 00</h1>
+                </div>
 
-        <!-- Affichage du nombre de frappes -->
-        <div id="strikeCountDiv">
-            <h1 class="strikeCount">1x</h1>
-        </div>
+                <!-- Affichage du nombre de frappes -->
+                <div id="strikeCountDiv">
+                <h1 class="strikeCount">1x</h1>
+                </div>
+            </div>
 
-    </div>
+            <!-- Corps affiché après la fin du jeu, montrant le score final -->
+            <div id="gameEndDiv">
+                <div class="gameEndContainer">
 
-    <!-- Corps affiché après la fin du jeu, montrant le score final -->
-    <div id="gameEndDiv">
-        <div class="gameEndContainer">
+                    <!-- Affichage du score final -->
+                    <p>Score:<span id="endGameScore"></span></p>
 
-            <!-- Affichage du score final -->
-            <p>Score:<span id="endGameScore"></span></p>
+                    <!-- Bouton pour revenir à l'accueil -->
+                    <button id="returnHome">acceuil<i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+            </div>
 
-            <!-- Bouton pour revenir à l'accueil -->
-            <button id="returnHome">acceuil<i class="fa-solid fa-right-to-bracket"></i></button>
-        </div>
-    </div>
+        <script src="./jeux.js"></script>
+    </main>
+    <footer>
 
-    <script src="./jeux.js"></script>
+    </footer>
 </body>
 </html>

@@ -7,25 +7,34 @@
     <title>inscription</title>
 </head>
 <body>
-    <img class="img_inscrip" src="/img/img inscription.jpg" alt="">
-    <div class="container">
-        <h1>Inscription au jeu</h1>
-        <form id="inscriptionForm">
-            <label for="username">Nom d'utilisateur :</label>
-            <input type="text" id="username" name="username" required>
-            <span class="error-message" id="usernameError"></span>
+    <header>
 
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required>
-            <span class="error-message" id="passwordError"></span>
+    </header>
+        <main>
+            <img class="img_inscrip" src="/img/img inscription.jpg" alt="">
+                <div class="container">
+                    <h1>Inscription au jeu</h1>
 
-            <label for="confirmPassword">Confirmer le mot de passe :</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <span class="error-message" id="confirmPasswordError"></span>
+                    <form id="inscriptionForm">
+                        <label for="username">Nom d'utilisateur :</label>
+                        <input type="text" id="username" name="username" required>
+                        <span class="error-message" id="usernameError"></span>
 
-            <button type="submit">S'inscrire</button>
-        </form>
-    </div>
-    <script src="/inscription.js"></script>
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="error-message" id="passwordError"></span>
+
+                        <label for="confirmPassword">Confirmer le mot de passe :</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span class="error-message" id="confirmPasswordError"></span>
+
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+            <script src="/inscription.js"></script>
+        </main>
+        <footer>
+            
+        </footer>
 </body>
 </html>
