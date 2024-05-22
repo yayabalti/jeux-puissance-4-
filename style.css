@@ -28,7 +28,7 @@ a {
     font-size: 22px;
 }
 a:visited {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 a:hover {
     color: #ffffff;
@@ -41,16 +41,17 @@ a:hover {
 
 .off-screen-menu {
     background-color: rgba(92, 9, 57, 0.897);
-    height: 28vh;
+    height: 24vh;
     width: 100vw;
     max-width: 184px;
     position: fixed;
-    top: 34px;
+    top: 26px;
     right: -465px;
     display: flex;
+    align-items: flex-end;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: center;
     font-size: 2rem;
     transition: .3s ease;
@@ -87,7 +88,7 @@ nav {
 .ham-menu span {
     height: 5px;
     width: 100%;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 25px;
     position: absolute;
     left: 50%;
@@ -102,7 +103,7 @@ nav {
     top: 75%;
 }
 .ham-menu.active span {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 .ham-menu.active span:nth-child(1) {
     top: 50%;
@@ -129,6 +130,18 @@ p{
     left: 431px;
     bottom:603px;
     color: red;
+}
+
+h1{
+    position: absolute;
+    top: 330px;
+    left: 544px;
+    font-size: 46px;
+    color: white;
+    background-color: #0000007f;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media (min-width: 319px) and (max-width: 426px){
