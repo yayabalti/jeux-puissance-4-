@@ -62,7 +62,7 @@ a:hover {
 
 
 .off-screen-menu.active {
-    right: 335px;
+    right: 318px;
 }
 
 
@@ -153,9 +153,9 @@ h1{
 }
 
 .img_footer_fruit{
-    width: 53vh;
+    width: 55vh;
     position: absolute;
-    top: 99vh;
+    top: 100vh;
 }
 
 .texte_footer{
